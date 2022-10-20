@@ -134,11 +134,73 @@ body {
    background: gray;
    color: #fff;
    font-family: sans-serif;
-   text-align: center;
+   //    text-align: center;
 }
-.demo{
-    margin-top: 10%;
-    p{
-        margin-top: 2%;
-    }
+.post {
+   margin-top: 15px;
+}
+#learnVueJs {
+   width: 50%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-size: 30px;
+   .counterInfo,
+   .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+   }
+   .buttons {
+      margin-top: 20px;
+      button {
+         padding: 10px 0;
+      }
+   }
+}
+
+.calculator {
+   width: 100%;
+   max-width: 300px;
+   margin: 10% auto;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   * {
+      transition: 0.25s;
+      cursor: pointer;
+   }
+   input {
+      width: 100%;
+      outline: none;
+      border: none;
+      padding: 15px 10px;
+   }
+   button {
+      text-align: center;
+      color: #fff;
+      padding: 20px 10px;
+   }
+   .numbers {
+      flex: 1 1 50px;
+      min-width: 100px;
+      border: 1px solid rgb(51, 51, 51);
+      background: rgb(51, 51, 51);
+      &:hover {
+         background: #000;
+         border: 1px solid rgb(185, 184, 184);
+      }
+   }
+   .operators {
+      min-width: 100px;
+
+      background: goldenrod;
+      border: none;
+      flex: 1 1 50px;
+
+      &:hover {
+         background: rgb(159, 120, 23);
+      }
+   }
 }

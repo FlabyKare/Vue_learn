@@ -21,15 +21,71 @@
 <body>
 
 
-    <div id="v-model-basic" class="demo">
-        <input placeholder="edit me" />
-        <input placeholder="edit me" />
-        <p>Стоимость: <span v-model="price">200</span> рублей</p>
-        <button @click="counter = +pirce + +price"> +100</button>
+    <!-- <section id="learnVueJs">
+        <form class="formForPosts" action="#" @submit.prevent>
+            <main class="inputsParent">
+                <input type="text" placeholder="Название" v-model="postTitle">
+                <input type="text" placeholder="Описание статьи" v-model="postDescription">
+            </main>
 
-        <p>Итоговая сумма: {{ counter }}</p>
-    </div>
+            <button @click="addPost">Добавить пост</button>
+        </form>
+        <section class="postsWrapper" v-for="item in postArray">
+            <p class="title">Название: {{ item.title }}</p>
+            <p class="desription">Содержание: {{ item.description }}</p>
+        </section> -->
 
+
+    <section class="calculator">
+        <input @keyup.enter="calc()" v-model="result" type="text" placeholder="0">
+        <button @click="input(num)" class="numbers" v-for="num in numbers">{{ num }}</button>
+        <button @click="input(move)" class="operators" v-for="move in operations">{{ move }}</button>
+        <button @click="recet()" class="operators">C</button>
+        <button @click="calc()" class="operators">=</button>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <form class="postForm" @submit.prevent action="#">
+            <input @input="valueTitle = $event.target.value" v-bind:value="valueTitle" type="text"
+                placeholder="Название поста">
+            <input @input="valueBody = $event.target.value" v-bind:value="valueBody" type="text"
+                placeholder="Описание поста">
+            <button  @click="createPost">Добавить пост : )</button>
+        </form>
+        <div class="post" v-for="item in posts">
+            <div ><strong>Название: </strong> {{ item.title }}</div>
+            <div><strong>Описание: </strong> {{ item.body }}</div>
+
+        </div> -->
+    <!-- <div  class="counterInfo">
+            <p>Лайков набралось: {{ likes }}</p>
+            <p>Дизлайов набралось: {{ dislikes }}</p>
+        </div>
+        <div class="buttons">
+            <button @click="plusLikes">Лайк</button>
+            <button @click="plusDislikes">Дизлайк</button>
+
+            <button @click="minesLikes">Убрать лайк</button>
+            <button @click="minesDislikes">Убрать дизлайк</button>
+        </div> -->
+    <!-- <button>Показать попап</button>
+        <div class="popup">
+            <p></p>
+        </div> -->
+
+    </section>
 
 
 
